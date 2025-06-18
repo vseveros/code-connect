@@ -1,0 +1,214 @@
+/****** Cores ******/
+
+:root {
+ --primary-color: #81FE88;
+ --primary-color_hover: #02CA0C;
+ --verde-pastel: #BFFFC3;
+ --verde-pretoleo: #132E35;
+ --background-color: #01080E;
+ --tag-color: #171D1F;
+ --cinza: #3E3E3F;
+ --secondary-color: #888888;
+ --cinza-claro: #BCBCBC;
+ --text-color: #E1E1E1;
+ --branco: #FFF;
+ --itens-background: #171D1F;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: 1 / 1 / 3 / 2;
+    width: 100%;
+    padding: var(--space-lg);
+    background-color: var(--itens-background);
+    border-radius: var(--radius-md);
+}
+
+.nav img {
+    width: 96px;
+}
+
+.nav a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-xs);
+    text-align: center;
+    text-decoration:none;
+    color: var(--secondary-color);
+}
+
+.nav a:hover {
+    color: var(--verde-hover);
+}
+
+.nav a:last-child {
+    justify-content: end;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: 1 / 1 / 2 / 3;
+    padding: var(--space-lg);
+    height: fit-content;
+}
+
+/*************** Botões ***************/
+
+.head>.btn, .botes-acoes a, .card>.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-md);
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+}
+
+.head>.btn, .botes-acoes a:last-child{
+    background-color: var(--primary-color);
+    color: var(--tag-color);
+    border: 1px solid var(--primary-color);   
+}
+
+.botes-acoes a:first-child{
+    color: var(--error-200);
+}
+
+.card>.btn {
+    margin: var(--space-md) var(--space-zero) var(--space-sm) var(--space-zero);
+    background-color: var(--itens-background);
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.content {
+    grid-area: 1 / 2 / 3 / 6;
+    display: grid;
+    padding: var(--space-lg);
+    background-color: var(--itens-background);
+    border-radius: var(--radius-md);
+}
+
+.container-img {
+    display: flex;
+    justify-content: center;
+    background-color: var(--cinza);
+    padding: var(--space-sm);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.card img {
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+
+
+
+.info-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.form {
+    padding: 0px var(--space-lg);
+}
+
+.botes-acoes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    gap: var(--space-sm);
+}
+
+/*************** Formulário ***************/
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+form div label {
+    display: block;
+    margin-bottom: var(--space-sm);
+    font-weight: 700;
+}
+
+form div input, textarea {
+    width: 100%;
+    padding: var(--space-sm) var(--space-lg);
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: var(--radius-sm);
+}
+
+form div input {
+    height: 40px;
+}
+
+textarea {
+    height: 160px;
+}
+
+form li {
+    list-style: none;
+}
+
+.lista-tags {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.lista-tags li {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-xs);
+    border-radius: var(--radius-sm);
+    background-color: var(--secondary-color);
+    color: var(--tag-color);
+    font-weight: 700;
+}
+
+.lista-tags li span {
+    font-size: var(--icon-sm);
+}

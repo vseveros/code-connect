@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/fundacoes.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>CodeConnect</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <img src="./img/logo.svg" alt="CodeConnect - Logo">
+            <a href="#" class="btn">
+                <span class="material-icons">feed</span>
+                Feed
+            </a>
+            <a href="#" class="btn">
+                <span class="material-icons">account_circle</span>
+                Perfil
+            </a>
+            <a href="#" class="btn">
+                <span class="material-icons">info</span>
+                Sobre
+            </a>
+            <a href="#" class="btn">
+                <span class="material-icons">logout</span>
+                Sair
+            </a>
+        </div>
+        <div class="content">
+            <div class="head">
+                <h1 class="display-xs">Novo projeto</h1>
+                <a href="#" class="btn">
+                    Publicar
+                </a>
+            </div>
+            <div class="card">
+                <div class="container-img">
+                    <img src="./img/imagem1.png" class="main-imagem">
+                </div>
+                
+                <a href="" id="upload-btn" class="btn"><span class="material-icons">upload</span>Carregar imagem</a>
+                <input type="file" id="imagem-upload" accept="image/" style="display: none;" />
+                <div class="info-card text-sm container-imagem-nome">
+                    <p>imagem_projeto.png</p><span class="material-icons">close</span>
+                </div>
+            </div>
+            <div class="form">
+                <form>
+                    <div>
+                        <label class="text-lg" for="nome">Nome do projeto</label>
+                        <input type="text" id="nome" name="nome" />
+                    </div>
+                    <div>
+                        <label class="text-lg" for="categoria">Tags</label>
+                        <input type="text" name="categoria" id="input-tags"/>
+                    </div>
+                    <ul class="lista-tags text-sm">
+                        <!-- Tags serão adicionadas aqui -->
+                    </ul>
+                    <div>
+                        <label class="text-lg" for="decricao">Descrição</label>
+                        <textarea type="text" id="descricao" name="descricao"></textarea>
+                    </div>
+                   
+                    <div class="botes-acoes">
+                        <a href="#" class="btn"><span class="material-icons">delete</span>Descartar</a>
+                        <a href="#" class="btn"><span class="material-icons">upload</span>Publicar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./scripts/code-connect.js"></script>
+</body>
+
+</html>
