@@ -14,41 +14,31 @@
 <body>
     <div class="container">
         <div class="nav">
-            <img src="./img/logo.svg" alt="CodeConnect - Logo">
-            <a href="#" class="btn">
-                <span class="material-icons">feed</span>
-                Feed
-            </a>
-            <a href="#" class="btn">
-                <span class="material-icons">account_circle</span>
-                Perfil
-            </a>
-            <a href="#" class="btn">
-                <span class="material-icons">info</span>
-                Sobre
-            </a>
-            <a href="#" class="btn">
-                <span class="material-icons">logout</span>
-                Sair
-            </a>
+            <div class="logo-nav">
+                <img src="./img/logo.svg" alt="CodeConnect - Logo">
+            </div>
+                <div class="menu-nav">
+                <a href="#" class="btn">
+                    Feed
+                </a>
+                <a href="#" class="btn">
+                    Perfil
+                </a>
+                <a href="#" class="btn">
+                    Sobre
+                </a>
+                <a href="#" class="btn">
+                    <span class="material-icons">logout</span>
+                    Sair
+                </a>
+            </div>
         </div>
         <div class="content">
             <div class="head">
                 <h1 class="display-xs">Novo projeto</h1>
-                <a href="#" class="btn">
-                    Publicar
+                <a href="#">
+                    <span class="material-icons">cancel</span>
                 </a>
-            </div>
-            <div class="card">
-                <div class="container-img">
-                    <img src="./img/imagem1.png" class="main-imagem">
-                </div>
-                
-                <a href="" id="upload-btn" class="btn"><span class="material-icons">upload</span>Carregar imagem</a>
-                <input type="file" id="imagem-upload" accept="image/" style="display: none;" />
-                <div class="info-card text-sm container-imagem-nome">
-                    <p>imagem_projeto.png</p><span class="material-icons">close</span>
-                </div>
             </div>
             <div class="form">
                 <form>
@@ -67,12 +57,24 @@
                         <label class="text-lg" for="decricao">Descrição</label>
                         <textarea type="text" id="descricao" name="descricao"></textarea>
                     </div>
-                   
-                    <div class="botes-acoes">
-                        <a href="#" class="btn"><span class="material-icons">delete</span>Descartar</a>
-                        <a href="#" class="btn"><span class="material-icons">upload</span>Publicar</a>
-                    </div>
                 </form>
+            </div>
+            <div class="card">
+                <h1 class="display-xs">Selecionar imagem</h1>
+                <div class="container-img">
+                    <img src="./img/imagem1.png" class="main-imagem">
+                </div>
+                <div class="info-upload">
+                    <a href="" id="upload-btn" class="btn"><span class="material-icons">upload</span>Carregar imagem</a>
+                    <input type="file" id="imagem-upload" accept="image/" style="display: none;" />
+                    <div class="info-card text-sm container-imagem-nome">
+                        <p>imagem_projeto.png</p><span class="material-icons">close</span>
+                    </div>
+                </div>
+            </div>
+            <div class="botes-acoes">
+                        <a href="#" class="btn btn-descartar"><span class="material-icons">delete</span>Descartar</a>
+                        <a href="#" class="btn btn-publicar"><span class="material-icons">upload</span>Publicar</a>
             </div>
         </div>
     </div>
